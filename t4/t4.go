@@ -30,7 +30,6 @@ func mainWriter(ctx context.Context, wg *sync.WaitGroup, intMun chan int) {
 	}
 }
 
-
 func regularWorker(ctx context.Context, wg *sync.WaitGroup, intNum chan int, chanName int,) {
 	for i := 0; i >= 0; i++ {
 		select{
@@ -44,7 +43,6 @@ func regularWorker(ctx context.Context, wg *sync.WaitGroup, intNum chan int, cha
 		}
 	}
 }
-
 
 func main(){
 	var (

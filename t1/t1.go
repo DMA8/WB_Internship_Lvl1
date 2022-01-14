@@ -15,7 +15,7 @@ type Human struct {
 	LikesBeer	bool
 }
 
-//Check wether Human probably consumes beer
+//Check if Human probably consumes beer
 func (h Human)CheckBeerConsumer() bool{ 
 	if h.Age >= 18 && h.LikesBeer {
 		return true
@@ -23,7 +23,7 @@ func (h Human)CheckBeerConsumer() bool{
 	return false
 }
 
-//Struct for demonstration of inheritance 
+//Struct for demonstration of embedding 
 type Action struct {
 	Region	string
 	Human
@@ -32,5 +32,4 @@ type Action struct {
 func main(){
 	test := Action{"Brighton", Human{"TestName", 19, true}}
 	fmt.Println(test.CheckBeerConsumer())
-
 }

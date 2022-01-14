@@ -1,3 +1,7 @@
+/*
+Дана последовательность чисел: 2,4,6,8,10. Найти сумму их
+квадратов(22+32+42….) с использованием конкурентных вычислений.
+*/
 package main
 
 import (
@@ -32,6 +36,5 @@ func main(){
 	}()
 
 	wg.Wait() // waits until wgCounter == 0
-	
 	fmt.Println(allNumbersSum)
 }
